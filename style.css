@@ -14,8 +14,60 @@ h1 {
   font-size: 5rem;
 }
 
-footer {
-  text-align: right;
-  color: midnightblue;
+img.logo {
+  display: inline;
+  width: 10rem;
 }
 
+
+img.tile-image {
+  width: 200px;
+  float: left;
+  margin-right: 40px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  grid-template-rows: 300px 300px;
+}
+
+.left {
+  grid-column: span 1;
+}
+
+.right {
+  grid-column: span 1;
+}
+
+footer {
+  clear: both;
+  text-align: right;
+}
+
+@media (max-width:600px) {
+  img.logo {
+    width: 5rem;
+  }
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .left {
+    grid-column: span 2;
+  }
+  .right {
+    grid-column: span 2;
+  }
+  img.tile-image {
+    width:100%;
+    height: 200px;
+  }
+  .card-text {
+    clear: left;
+}
+.grid-container {
+  grid-template-rows: max-content;
+}
+}
